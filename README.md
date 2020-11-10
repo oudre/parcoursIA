@@ -1,6 +1,11 @@
 # parcoursIA
-These notebooks are associated with my Master's course in Parcours IA at ENS Paris-Saclay (Université Paris Saclay, France): *Machine Learning and Artificial Intelligence for signals and time series*
+These notebooks are associated with my Master's course in Parcours IA at ENS Paris-Saclay (University Paris Saclay, France): *Machine Learning and Artificial Intelligence for signals and time series*
 Slides (in French) are available here : http://www.laurentoudre.fr/signalml.html
+
+<br>
+
+*How to cite*<br>
+L. Oudre (2020). Machine Learning and Artificial Intelligence for signals and time series. ENS Paris Saclay, University Paris Saclay. https://github.com/oudre/parcoursIA
 
 <br>
 
