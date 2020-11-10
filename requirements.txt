@@ -5,3 +5,4 @@ sporco
 statsmodels
 ruptures
 sklearn
+time
