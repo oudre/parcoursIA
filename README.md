@@ -5,13 +5,15 @@ Slides (in French) are available here : http://www.laurentoudre.fr/signalml.html
 <br>
 
 *How to cite*<br>
-L. Oudre (2020). Machine Learning and Artificial Intelligence for signals and time series. ENS Paris Saclay, University Paris Saclay. https://github.com/oudre/parcoursIA
+L. Oudre (2021). Machine Learning and Artificial Intelligence for signals and time series. ENS Paris Saclay, University Paris Saclay. https://github.com/oudre/parcoursIA
 
 <br>
 
 Contact : laurent.oudre AT ens-paris-saclay DOT fr
 
 <br>
+
+**Session 0 : Installation.**<br>
 
 **Session 1 : Introduction to Signal Processing.**<br>
 Sampling, Discrete Fourier Transform (DFT) and digital filters.
@@ -26,10 +28,14 @@ Signal+noise model, sinusoidal model, trend+seasonality model and autoregressive
 Notion of sparsity, sparse coding (l0 and l1), dictionary learning.
 
 **Session 5 : Pre-processing**<br>
-Denoising, detrending, removal of impulsive noise, interpolation and change point detection.
+Denoising, detrending, removal of impulsive noise, interpolation of missing samples.
 
 **Session 6 : Feature extraction and selection**<br>
 Classical feature extraction, unsupervised feature selection with PCA, supervised feature selection (filter, wrapper and embedded methods).
 
 **Session 7 : Pattern detection and extraction**<br>
 Distances between time series (Euclidean, normalized Euclidean and DTW), pattern detection and distance-based pattern extraction.
+
+**Session 8 : Change-point and anomaly detection**<br>
+Offline change-point detection with known and unknown number of breakpoints, model-based and distance-based anomaly detection.
+
