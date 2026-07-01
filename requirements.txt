@@ -1,8 +1,12 @@
+# Dépendances du cours - versions non figées (installe toujours les dernières compatibles)
+# Pour un environnement reproductible et testé, utiliser requirements-lock.txt à la place.
 numpy
 matplotlib
 scipy
 sporco
 statsmodels
 ruptures
-sklearn
+scikit-learn
 loadmydata
+jupyter
+ipympl

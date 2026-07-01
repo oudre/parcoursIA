@@ -1,0 +1,53 @@
+# À placer dans .github/workflows/test-notebooks.yml à la racine du dépôt
+#
+# But : exécuter tous les notebooks automatiquement (à chaque push, PR, et une fois
+# par mois) pour détecter une future casse (nouvelle version de numpy/matplotlib/
+# scikit-learn, etc.) AVANT que les étudiants ne tombent dessus.
+
+name: Test notebooks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: "0 6 1 * *"   # le 1er de chaque mois à 6h UTC
+  workflow_dispatch:        # bouton "Run workflow" manuel sur GitHub
+
+jobs:
+  execute-notebooks:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        notebook:
+          - Session0.ipynb
+          - Session1.ipynb
+          - Session2.ipynb
+          - Session3.ipynb
+          - Session4.ipynb
+          - Session5.ipynb
+          - Session6.ipynb
+          - Session7.ipynb
+          - Session8.ipynb
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Installer les dépendances
+        run: |
+          pip install -r requirements-lock.txt
+          pip install jupyter nbconvert
+
+      - name: Exécuter ${{ matrix.notebook }}
+        run: |
+          jupyter nbconvert --to notebook --execute \
+            --ExecutePreprocessor.timeout=300 \
+            --output /tmp/executed.ipynb \
+            "${{ matrix.notebook }}"
+        # Si une cellule lève une exception, nbconvert (sans --allow-errors)
+        # retourne un code d'erreur non nul et fait échouer le job -> notification GitHub.
