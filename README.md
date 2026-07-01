@@ -1,4 +1,4 @@
-# parcoursIA
+# Diplome ARIA
 These notebooks are associated with my course in Diplome ARIA at ENS Paris-Saclay (University Paris Saclay, France): *Machine Learning and Artificial Intelligence for signals and time series*
 Slides (in French) are available here : http://www.laurentoudre.fr/signalml.html
 
